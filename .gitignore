@@ -1,0 +1,24 @@
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+public class LectorTeclado {
+    BufferedReader br;
+    public LectorTeclado(){
+        br = new BufferedReader(new InputStreamReader(System.in));
+        
+    }
+    public String leerCadena(String mensaje) throws IOException {
+        System.out.println(mensaje);
+        String cadena = "";
+        cadena = br.readLine();
+        return cadena;
+    }
+    public int leerEntero(String mensaje) throws IOException {
+        System.out.println(mensaje);
+        int entero = 0;
+        entero= Integer.parseInt(br.readLine());
+        return entero;
+    }
+    
+}
